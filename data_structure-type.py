@@ -1,18 +1,17 @@
-# mydict = {}
-# keys = ['a', 'b', 'c']
-# value = [{"university": "harward", "entery_date": 2005}]
-# input_data = "experiences.educations", [{"university": "harward", "entery_date": 2005}]
-# mydict = {}
-# keys_input = ["experiences", "educations"]
-# value_input = [{"university": "harward", "entery_date": 2005}]
+
 mydict = {}
 
 def recur(keys_input, cur_dict, last_value):
     if len(keys_input) <= 1:
-        cur_dict[keys_input.pop(0)] = last_value
+        last_key = keys_input.pop(0)
+        print(type(last_value))
+        if last_key not in cur_dict:
+            cur_dict[last_key] = []
+        cur_dict[last_key].append(last_value)
         return cur_dict
     key = keys_input.pop(0)
-    cur_dict[key] = {}
+    if key not in cur_dict:
+        cur_dict[key] = {}
     recur(keys_input, cur_dict[key], last_value)
     return cur_dict
 
