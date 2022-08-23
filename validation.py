@@ -25,4 +25,24 @@ def validate_age():
             print(age)
 
 
-validate_age()
+# -----------------------------------------------------
+from datetime import date
+
+
+def validate_year():
+    years_list = []
+    while True:
+        input_year = input("enter year:")
+
+        if input_year == "end":
+            break
+        else:
+            cur_year = date.today().year
+            if 2000 <= int(input_year) <= cur_year:
+                years_list.append(input_year)
+            else:
+                print("invalid_year")
+    print(years_list)
+
+
+validate_year()
