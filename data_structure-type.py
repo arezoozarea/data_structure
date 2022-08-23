@@ -7,7 +7,8 @@ def recur(keys_input, cur_dict, last_value):
         print(type(last_value))
         if last_key not in cur_dict:
             cur_dict[last_key] = []
-        cur_dict[last_key].append(last_value)
+        for item in last_value:
+            cur_dict[last_key].append(item)
         return cur_dict
     key = keys_input.pop(0)
     if key not in cur_dict:
@@ -23,5 +24,5 @@ def structure_type(paths, last_value):
 
 structure_type("experiences.educations", [{"university": "harward", "entery_date": 2005}])
 structure_type("experiences.educations", [{"university": "oxford", "entery_date": 2011}])
-
+structure_type("experiences.educations", [{"university": "birmangham", "entery_date": 2007}])
 print(mydict)
