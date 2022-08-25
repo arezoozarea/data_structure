@@ -1,6 +1,7 @@
 import re
 
-regex = "\d+\.\d+"
-a = "45.6"
-ad = re.match(regex,a)
-print(ad)
+a = "arezoo is ahard worker"
+b = "zo"
+split_a = a.split(" ")
+if b in split_a[0]:
+    print(b)
