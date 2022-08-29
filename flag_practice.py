@@ -5,9 +5,7 @@ word = input("enter your word:")
 def get_sentence(sentence):
     is_valid = True
     split_sentence = sentence.split(" ")
-    if len(split_sentence) < 4 or not sentence.endswith("."):
-        is_valid = False
-
+    if len(split_sentence) >= 4 or  sentence.endswith("."):
         return is_valid
 
 
