@@ -58,5 +58,7 @@ read_data.columns = indexes
 # print(date_range)
 # ----------------
 
-print(read_data.iloc[-5:])
+print(read_data.iloc[-3:])
+a = read_data.groupby(by=["Company_Name"]).value_counts()
+print(a)
 print(read_data.iloc[:5])
