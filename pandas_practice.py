@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 
 # base_path = r"C:\personal_files"
@@ -39,12 +40,7 @@ indexes = ["Name", "Company_Name", "Employee_Job_Title", "Employee_City", "Emplo
 # a = read_data[mask]
 
 # --------------
-# df = pd.DataFrame({
-#     "A": ["foo", "bar", "foo", "bar", "foo", "bar", "foo", "foo"]
-#     , "B": ["one", "one", "two", "three", "two", "two", "one", 'three']
-#     , "C": np.random.randn(8), "D": np.random.randn(8)})
-# for key in df.keys():
-#     print(df[key].value_counts())
+
 # ----------------
 # today = pd.to_datetime("today")
 # date_range = pd.date_range(today, periods=6, freq="H")
@@ -59,10 +55,11 @@ indexes = ["Name", "Company_Name", "Employee_Job_Title", "Employee_City", "Emplo
 first_df = pd.DataFrame([["shiraz", 1500000], ["esfehan", 2700000], ["tabriz", 1450000]], columns=["city", "pop"])
 first_df["area"] = [500, 340, 780]
 second_df = pd.DataFrame([["ahvaz", 670000], ["rasht", 560000]], columns=["city", "pop"])
-# merged_df = pd.merge(first_df, second_df, on=["city", "pop_x"])
+concate_df= pd.concat([first_df,second_df])
+print(concate_df)
 
-frames = [first_df, second_df]
-
-
-
-print(pd.concat(frames))
+# df = pd.DataFrame({
+#     "A": ["foo", "bar", "foo", "bar", "foo", "bar", "foo", "foo"]
+#     , "B": ["one", "one", "two", "three", "two", "two", "one", 'three']
+#     , "C": np.random.randn(8), "D": np.random.randn(8)})
+# print(df.groupby(['A']).value_counts())
