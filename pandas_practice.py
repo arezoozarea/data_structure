@@ -1,11 +1,8 @@
-import os
-
-import pandas
 import pandas as pd
 
-base_path = r"C:\personal_files"
-input_data = os.path.join(base_path, "employee_dataset.txt")
-read_data = pandas.read_csv(input_data, delimiter="\t")
+# base_path = r"C:\personal_files"
+# input_data = os.path.join(base_path, "employee_dataset.txt")
+# read_data = pandas.read_csv(input_data, delimiter="\t")
 
 #
 # --------------
@@ -33,18 +30,14 @@ read_data = pandas.read_csv(input_data, delimiter="\t")
 indexes = ["Name", "Company_Name", "Employee_Job_Title", "Employee_City", "Employee_Country", "Employee_Salary",
            "Employment_Status", "	Employee_Rating"
            ]
-read_data.columns = indexes
+# read_data.columns = indexes
 # print(get_column('Company_Name'))
 # mask = read_data["Employee_Salary"] > 900000
 # a=read_data[mask]
 # print(a)
 # mask = read_data.Employee_Country == "Japan"
 # a = read_data[mask]
-# first_df = pd.DataFrame([["shiraz", 1500000], ["esfehan", 2700000], ["tabriz", 1450000]], columns=["city", "pop"])
-# first_df["area"] = [500, 340, 780]
-# second_df = pd.DataFrame([["ahvaz", 670000], ["rasht", 560000]], columns=["city", "pop"])
-# merged_df = first_df.merge(second_df, how='left')
-# print(merged_df)
+
 # --------------
 # df = pd.DataFrame({
 #     "A": ["foo", "bar", "foo", "bar", "foo", "bar", "foo", "foo"]
@@ -58,7 +51,18 @@ read_data.columns = indexes
 # print(date_range)
 # ----------------
 
-print(read_data.iloc[-3:])
-a = read_data.groupby(by=["Company_Name"]).value_counts()
-print(a)
-print(read_data.iloc[:5])
+# print(read_data.iloc[-3:])
+# a = read_data.groupby(by=["Company_Name"]).value_counts()
+# print(a)
+# print(read_data.iloc[:5])
+
+first_df = pd.DataFrame([["shiraz", 1500000], ["esfehan", 2700000], ["tabriz", 1450000]], columns=["city", "pop"])
+first_df["area"] = [500, 340, 780]
+second_df = pd.DataFrame([["ahvaz", 670000], ["rasht", 560000]], columns=["city", "pop"])
+# merged_df = pd.merge(first_df, second_df, on=["city", "pop_x"])
+
+frames = [first_df, second_df]
+
+
+
+print(pd.concat(frames))
