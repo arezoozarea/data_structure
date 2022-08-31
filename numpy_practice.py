@@ -25,14 +25,24 @@ import numpy as np
 # print(np.ravel(mulit_array))
 # -----------------------------
 # array_list = np.array([[2, 3, 4], [1, 2, 3], [5, 2, 4]])
-# mask = np.where(array_list >=3)
+# mask = array_list >=3
 # array_list[mask]
 # print(array_list[mask])
 # -----------------------------
 # a = np.array([[2,3,4],[5,6,7]])-2
 # print(a)
 # -----------------------------
-three_dim_aray = np.array([[3,4,5],[6,7,8],[6,8,9]])
-a = [np.max(arr) for arr in three_dim_aray]
-print(a)
-print(np.max(three_dim_aray))
+# three_dim_aray = np.array([[3,4,5],[6,7,8],[6,8,9]])
+# a = [np.max(arr) for arr in three_dim_aray]
+# print(a)
+# print(np.max(three_dim_aray))
+
+# array_list = np.array([[2, 3, 4], [1, 2, 3], [5, 2, 4]])
+#
+# a= np.array([1,2,3,4,11,12])
+# mask = a>3
+# print(a[a > 10]
+#
+three_dim_array = np.array([[3, 4, 5], [1,10,5], [6, 7, 8], [6, 8, 9]])
+# print(three_dim_array[2:-1].max())
+print(three_dim_array.max(axis=1))
