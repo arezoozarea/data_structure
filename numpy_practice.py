@@ -64,4 +64,13 @@ def valid_all(arr):
     return np.all(in_data)
 
 
-print(valid_all([True, False,True,True]))
+print(valid_all([True, False, True, True]))
+
+arr1 = np.arange(16).reshape(4, 4)
+
+arr2 = np.array([1, 3, 2, 5])
+arr3=np.array([1, 3, 2, 5])
+print(np.sum([arr2,arr1],axis=1))
+
+
+# np.sum([[0, 1], [np.nan, 5]], where=[False, True], axis=1)
