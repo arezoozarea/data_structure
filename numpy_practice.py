@@ -43,6 +43,25 @@ import numpy as np
 # mask = a>3
 # print(a[a > 10]
 #
-three_dim_array = np.array([[3, 4, 5], [1,10,5], [6, 7, 8], [6, 8, 9]])
+# three_dim_array = np.array([[3, 4, 5], [1,10,5], [6, 7, 8], [6, 8, 9]])
 # print(three_dim_array[2:-1].max())
-print(three_dim_array.max(axis=1))
+# print(three_dim_array.max(axis=0))
+array1 = np.all([True, False, True, True, False])
+array2 = np.array([[34, 5, 6, 5], [4, 78, 5, 4]])
+# print(np.all(array2 > 3, axis=1))
+# print(np.all(array2))
+
+a = np.array([
+    [2, 1],
+    [2, 0]
+])
+result = np.all(a, axis=1)
+# print(result)
+
+
+def valid_all(arr):
+    in_data = np.array(arr)
+    return np.all(in_data)
+
+
+print(valid_all([True, False,True,True]))
