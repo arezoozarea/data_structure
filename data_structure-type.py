@@ -1,15 +1,20 @@
+def is_list_type(last_value):
+    return type(last_value)== list
+
+
 
 mydict = {}
 
+
 def recur(keys_input, cur_dict, last_value):
     if len(keys_input) <= 1:
-        last_key = keys_input.pop(0)
-        print(type(last_value))
-        if last_key not in cur_dict:
-            cur_dict[last_key] = []
-        for item in last_value:
-            cur_dict[last_key].append(item)
-        return cur_dict
+        last_key = keys_input[0]
+        if is_list_type(last_value):
+            if last_key not in cur_dict:
+                cur_dict[last_key] = []
+            for item in last_value:
+                cur_dict[last_key].append(item)
+            return cur_dict
     key = keys_input.pop(0)
     if key not in cur_dict:
         cur_dict[key] = {}

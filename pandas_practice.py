@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 # base_path = r"C:\personal_files"
-# input_data = os.path.join(base_path, "employee_dataset.txt")
+# input_data = os.current_path.join(base_path, "employee_dataset.txt")
 # read_data = pandas.read_csv(input_data, delimiter="\t")
 
 #
