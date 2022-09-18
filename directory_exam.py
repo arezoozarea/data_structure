@@ -29,10 +29,9 @@ def get_path(input_path):
 for item in get_path(input_path):
     file_size = path.getsize(item)
     read_file = open(item, "r")
-    read_lines = read_file.readlines()
-    for read_line in read_lines:
-        a = read_line.split(" ")
-        print(a)
+    read_lines = read_file.readline()
+    print(type(read_lines))
+
 
 
 # for item in get_path(input_path):
