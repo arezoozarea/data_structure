@@ -23,17 +23,16 @@ def get_path(input_path):
             file_list.append(full_path)
     return file_list
 
+# with open("C:\Users\arezoo\Desktop\out")
+
 
 for item in get_path(input_path):
-
     file_size = path.getsize(item)
-    if file_size < 100 or file_size != 0:
-        read_file = open(item, "r")
-        a = read_file.readlines()
-        for i in a:
-            if i=="\n":
-                i.replace("\n","")
-            print (i)
+    read_file = open(item, "r")
+    read_lines = read_file.readlines()
+    for read_line in read_lines:
+        a = read_line.split(" ")
+        print(a)
 
 
 # for item in get_path(input_path):
